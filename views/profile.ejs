@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <div class="w-full h-full-screen bg-zinc-900 text-white p-10">
+    <div class="w-full h-screen bg-zinc-900 text-white p-10">
       <div class="w-full items-end">
         <a
           class="bg-red-500 rounded-md px-3 py-2 text-sm mb-5 inline-block"
@@ -15,9 +15,17 @@
           >logout</a
         >
       </div>
+      <div class="flex gap-3"> 
+        <div class="w-20 h-20 overflow-hidden rounded-md">
+          <img class="w-full h-full object-cover" src="/image/upload/<%=user.profilepic%>" alt="">
+        </div>
+
       <h3 class="text-3xl mb-2">
         <samp class="font-light">Hello</samp>, <%=user.username%>
       </h3>
+    </div> 
+
+
       <h5 class="mb-5">You can create a post.</h5>
       <form action="/post" method="post">
         <textarea
