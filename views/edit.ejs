@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="w-full h-screen bg-zinc-900 text-white p-10">
+      
+
+      <h5 class="mb-5">You can create a post.</h5>
+      <form action="/update/<%=post._id %>" method="post">
+        <textarea
+          placeholder="what in your mind ?"
+          class="p-3 outline-none block resize-none bg-transparent border-2 border-zinc-800 rounded-md"
+          name="content"
+          id=""
+        ><%=post.content%></textarea>
+        <input
+          class="px-3 width-40 bg-yellow-500 text-black block rounded-md mt-2"
+          type="submit"
+          value="Update Post"
+        />
+      </form>
+
+      
+    </div>
+  </body>
+</html>
